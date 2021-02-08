@@ -1,45 +1,43 @@
 <?php include "controllers/controller_index.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPER FLUX</title>
-    
+
     <!-- PAGE CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
-    <!-- CDN BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+
 <body>
-    
-<nav>
 
-</nav>
+    <nav>
+        <div>
+            <h1>SUPER FLUX</h1>
+        </div>
+        <div id="theme_name" class="theme_name">
+            <?php echo "thème dark"; ?>
+        </div>
+        <div class="configuration_menu">
+            <a href="#"><i class="fas fa-cog fa-3x"></i></a>
+        </div>
 
+    </nav>
 
+    <div class="container">
 
+        <section class="">
 
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <section class="cards">
+            <header></header>
+        </section>
 
 
 
@@ -61,11 +59,48 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------   FICHIER JS   ------------------------------------------------------------------------------->
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
+
 </html>
