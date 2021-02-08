@@ -1,4 +1,4 @@
-<?php include "controller_index.php"; ?>
+<?php include "controllers/controller_index.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,7 +16,9 @@
 </head>
 <body>
     
+<nav>
 
+</nav>
 
 
 
