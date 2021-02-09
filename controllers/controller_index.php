@@ -1,7 +1,5 @@
 <?php
 
-
-
 class rss
 {
     function rss_tools()
@@ -29,7 +27,7 @@ class rss
             </div>
 
             <div>
-                <input type="radio" id="tout" name="number" value="20" <?= isset($_POST['number']) && $_POST['number'] == '20' ? 'checked' : '' ?> ?>
+                <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
                 <label for="tout">tout</label>
             </div>
 
@@ -37,7 +35,7 @@ class rss
             <?php
             foreach ($feedArray as $key => $value) { ?>
                 <div>
-                    <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'selected' : '' ?>>
+                    <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'checked' : '' ?>>
                     <label for="<?= $value ?>"><?= $value ?></label>
                 </div>
             <?php
@@ -50,10 +48,15 @@ class rss
 
         <?php
         if (isset($_POST['submit'])) {
-            if (isset($_POST['number']) && isset($_POST['feed'])) {
+            
+            if (isset($_POST['feed'])) {
 
+                if (isset($_POST['number'])) {
+                    $number = $_POST['number'];
+                } else {
+                    $number = 18;
+                }
 
-                $number = $_POST['number'];
                 $feed = $_POST['feed'];
                 $xml = simplexml_load_file($feed); // On prend le bon feed.
                 if ($number > 0) {
@@ -100,13 +103,14 @@ class rss
                     }
                 }
             } else {
-                echo 'y\'as une erreur frére';
+                echo "Choisissez au moins un flux";
             }
         }
         ?>
 <?php
     }
-}
 
+
+}
 
 ?>
