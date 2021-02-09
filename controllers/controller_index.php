@@ -71,11 +71,36 @@ class rss
                 for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
                     <div>
-                        <button type="button fade" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= "modal[$i]" ?>">
+                        <button type="button fade" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
                             <?= $xml->channel->item[$i]->title ?>
                         </button>
                     </div>
 
+                    <div class="modal" id="<?= "modal-$i" ?>" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"><?= $xml->channel->item[$i]->title ?></h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="...">
+
+                                    <?php
+                                    $toExplode = $xml->channel->item[$i]->description;
+                                    $pieces = explode("<br/><br/>", $toExplode);
+                                    ?>
+                                    <p class="card-text"><?= $pieces[0] ?> <br>
+                                        <?= $xml->channel->item[$i]->link->pubDate ?> </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn-primary">Article</a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
