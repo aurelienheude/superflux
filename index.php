@@ -16,14 +16,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="body">
     <!------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------->
     <div class="main">
         <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
             <div class="container-fluid">
-                <a class="navbar_style_a navbar-brand" href="https://youtu.be/dQw4w9WgXcQ">SUPER FLUX</a>
+                <a id="branding" class="navbar_style_a navbar-brand" href="https://youtu.be/dQw4w9WgXcQ">SUPER FLUX</a>
                 <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="config_button fas fa-cog fa-2x"></i>
                 </button>
@@ -37,7 +37,7 @@
         <div class="collapse" id="navbarToggleExternalContent">
             <form class="form_style" action="index.php" method="post">
 
-                <div class="container_parent container-fluid">
+                <div id="container_parent" class="container_parent container-fluid">
                     <div class="row">
                         <!---------------------------------------------------------------------------->
                         <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
@@ -92,8 +92,8 @@
 
         <div class="container">
             <?php
-            $obj_rss = new rss;
-            $obj_rss->rss_tools();
+                $obj_rss = new rss;
+                $obj_rss->rss_tools();
             ?>
         </div>
     </div> <!-- MAIN END -->
