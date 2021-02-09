@@ -28,7 +28,7 @@ class rss
                 $feed = $_POST['feed'];
                 $xml = simplexml_load_file($feed); // On prend le bon feed.
 
-                setlocale(LC_TIME, 'fr_FR.UTF8', 'fra');
+                setlocale(LC_TIME, "fra.UTF8");
 
                 if ($number > 0) {
 
