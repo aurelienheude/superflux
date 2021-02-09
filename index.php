@@ -23,7 +23,7 @@
     <div class="main">
         <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
             <div class="container-fluid">
-                <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
+                <a class="navbar_style_a navbar-brand" href="https://youtu.be/dQw4w9WgXcQ">SUPER FLUX</a>
                 <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="config_button fas fa-cog fa-2x"></i>
                 </button>
@@ -44,9 +44,9 @@
                             <div class="inner text-center">
                                 <h2>Choisir un thème</h2>
                                 <div class="button_group">
-                                    <input id="default_mods_button" class="btn btn_default" type="button" onclick="default_mods();" value="default_mods">
-                                    <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
-                                    <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
+                                    <input id="default_mods_button" class="btn btn_style" type="button" onclick="default_mods();" value="LIGHT">
+                                    <input id="dark_mods_button" type="button" class="btn btn_style" onclick="dark_mods();" value="DARK">
+                                    <input id="unicorn_mods_button" type="button" class="btn btn_style" onclick="unicorn_mods();" value="UNICORN">
                                 </div>
 
                             </div>
@@ -81,7 +81,7 @@
                                     <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
                                     <label for="tout">tout</label>
                                 </div>
-                                <input type="submit" id="submit" value="submit" name="submit">
+                                <input type="submit" class="btn btn_style" id="submit" value="SUBMIT" name="submit">
                             </div>
                         </div>
                         <!--------------------------------------------------------------------------->

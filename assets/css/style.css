@@ -36,7 +36,18 @@
 
 .navbar_style_a
 {
+    font-size: 18px;
     color: white !important;
+    text-shadow: 0px 4px 1px -2px rgba(0, 0, 0, 0.288);
+    transition-duration: 0.3s ;
+    font-weight: bold;
+}
+
+.navbar_style_a:hover
+{
+    padding-left: 15px !important;
+    border-left: 3px solid #ffffff69;
+    text-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.288);
 }
 
 .navbar_style_button
@@ -48,11 +59,19 @@
     outline: none !important;
 }
 
+.navbar_style_button:hover
+{
+    border: none !important;
+    transform: rotate(720deg) !important;
+    color: #3bffe5ad !important;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
+}
 .navbar_style_button:active
 {
     border: none !important;
-    transform: rotate(180deg) !important;
-    color: #e67e22 !important;
+    transform: rotate(0deg) !important;
+    color: #53ff1eab !important;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
 }
 
 .container_parent
@@ -69,18 +88,21 @@
     margin-top: 20%; 
 }
 
-.btn_default
+.btn_style
 {
-    border: 3px solid white !important;
-    box-shadow: none;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
     background: #34495e !important;
     transition-duration: 0.3s;
 }
 
-.btn_default:hover
+.btn_style:hover
 {
-    background: white !important;
+    background: #34495e41 !important;
 }
+
 .container_parent .col_child
 {
     background: none;
@@ -100,6 +122,13 @@
 .container_parent .col_child .inner
 {
     padding: 1em;
+    transition-duration: 0.3s;
+}
+
+.container_parent .col_child .inner:hover
+{
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
 }
 
 .form_style
