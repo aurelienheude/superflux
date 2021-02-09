@@ -12,17 +12,17 @@
 /*********   ALL   ********/
 /**************************/
 
-* {
+* 
+{
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
+
+.main 
+{
     min-height: 1400px;
-
+    position: relative;
 }
-
 
 /***********************************************************************************************************/
 /*************************************************   NAV    ************************************************/
@@ -31,6 +31,7 @@ body {
 .navbar_style
 {
     background: #34495e;
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.288);
 }
 
 .navbar_style_a
@@ -56,14 +57,30 @@ body {
 
 .container_parent
 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    background: #34495e;
+    margin: 0px !important;
+    padding: 0px !important;
+    background: #425b75;
     color: white;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
 }
 
+.button_group
+{
+    margin-top: 20%; 
+}
+
+.btn_default
+{
+    border: 3px solid white !important;
+    box-shadow: none;
+    background: #34495e !important;
+    transition-duration: 0.3s;
+}
+
+.btn_default:hover
+{
+    background: white !important;
+}
 .container_parent .col_child
 {
     background: none;
@@ -72,7 +89,7 @@ body {
 
 .container_parent .col_child:hover
 {
-    background:rgba(255, 255, 255, 0.171)
+    background:rgba(0, 0, 0, 0.103)
 }
 
 .container_parent .col_child h2
@@ -83,9 +100,13 @@ body {
 .container_parent .col_child .inner
 {
     padding: 1em;
-    border-left: 1px solid rgba(255, 255, 255, 0.171);
-    border-right: 1px solid rgba(255, 255, 255, 0.171);
 }
+
+.form_style
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}   
 
 .buttonImg {
     height: 40px;
@@ -110,12 +131,6 @@ body {
     align-items: center;
 
 }
-.main {
-    min-height: 1400px;
-    position: relative;
-    padding-bottom:120px;
-
-}
 /* .theme_dark {}
 
 .theme_light {}
@@ -138,12 +153,13 @@ body {
 
 
 footer {
+    margin: 0px;
+    padding: 0px;
     bottom: 0;
     width: 100%;
     background-color: #34495e;
     color: white;
     height : 120px;
-
 }
 
 .footerLink {

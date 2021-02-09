@@ -17,8 +17,11 @@
 </head>
 
 <body>
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------->
     <div class="main">
-        <nav class="navbar_style navbar" aria-label="First navbar example">
+        <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
             <div class="container-fluid">
                 <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
                 <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,40 +29,44 @@
                 </button>
             </div>
         </nav>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
+
         <div class="collapse" id="navbarToggleExternalContent">
-            <div class="container_parent container-fluid m-0 p-0 ">
-                <div class="row p-0 m-0">
-                    <!---------------------------------------------------------------------------->
-                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <h2>Choisir un thème</h2>
+            <form class="form_style" action="index.php" method="post">
 
-                        </div>
-                    </div>
-                    <div class="col-lg-4 p-5 col_child d-flex justify-content-center bg-success">
-                        <div class="inner inner_center">
-                            <h2>Séléctionnez le flux</h2>
+                <div class="container_parent container-fluid">
+                    <div class="row">
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
+                                <h2>Choisir un thème</h2>
+                                <div class="button_group">
+                                    <input id="default_mods_button" class="btn btn_default" type="button" onclick="default_mods();" value="default_mods">
+                                    <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
+                                    <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
+                                </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <h2>Choisir le nombre de flux</h2>
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
+                                <h2>Choisir un Flux</h2>
+                                <?php
+                                foreach ($feedArray as $key => $value) { ?>
+                                    <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'checked' : '' ?>>
+                                    <label for="<?= $value ?>"><?= $value ?></label>
+                                <?php } ?>
 
+                            </div>
                         </div>
-                    </div>
-                    <!---------------------------------------------------------------------------->
-                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <input id="darkmods_button" type="button" onclick="change()" value="dark mode">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <h2>Choisir le nombre de flux</h2>
-
-                            <form action="index.php" method="post">
-                                <p> Nombre de posts </p>
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
+                                <h2>Nombre de flux</h2>
                                 <div>
                                     <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
                                     <label for="5">5</label>
@@ -74,35 +81,14 @@
                                     <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
                                     <label for="tout">tout</label>
                                 </div>
-
-                                <p>Feed</p>
-                                <?php
-                                foreach ($feedArray as $key => $value) { ?>
-                                    <div>
-                                        <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'checked' : '' ?>>
-                                        <label for="<?= $value ?>"><?= $value ?></label>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-
                                 <input type="submit" id="submit" value="submit" name="submit">
-                            </form>
-
+                            </div>
                         </div>
+                        <!--------------------------------------------------------------------------->
                     </div>
-                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <h2>Choisir le nombre de flux</h2>
-
-                        </div>
-                    </div>
-                    <!---------------------------------------------------------------------------->
                 </div>
-            </div>
+            </form>
         </div>
-
-
 
         <div class="container">
             <?php
@@ -110,14 +96,11 @@
             $obj_rss->rss_tools();
             ?>
         </div>
+    </div> <!-- MAIN END -->
 
-    </div>
-    
-    <div>
-        <?php
-        include('footer.php');
-        ?>
-    </div>
+    <?php
+    include('footer.php');
+    ?>
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------   FICHIER JS   ------------------------------------------------------------------------------->
