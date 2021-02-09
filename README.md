@@ -20,7 +20,8 @@ Aurélien au grand pied xD
 
 * 0.1
     * bug mineur et optimisation
-    * See [commit change]() or See [release history]()
+    * pas très beau
+    * Voir [pourquoi](http://www.mattharquin.com/wp-content/uploads/2015/03/Capture-d%E2%80%99e%CC%81cran-2015-03-17-a%CC%80-14.07.31.png) ou voir [parceque](https://lesjoiesducode.fr/wp-content/uploads/2020/01/nhIFj1M.jpg)
 
 ## Licence
 
