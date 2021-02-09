@@ -6,14 +6,14 @@ class rss
 {
     function rss_tools()
     {
-        
-    $feedArray = [
-        'https://www.01net.com/rss/pc-portables/' => "Flux PC Portable",
-        'https://www.01net.com/rss/tests/les-derniers-tests/rss-derniers-tests/' => 'Flux Tests',
-        'https://www.01net.com/rss/actualites/applis-logiciels/' => 'Flux Applis & Logiciels',
-        'https://www.01net.com/rss/actualites/jeux/' => 'Flux Jeux',
-        'https://www.01net.com/rss/actualites/securite/' => 'Flux Securité'
-    ]; // Tableau avec les feeds pour le select, les $key seront les xml
+
+        $feedArray = [
+            'https://www.01net.com/rss/pc-portables/' => "Flux PC Portable",
+            'https://www.01net.com/rss/tests/les-derniers-tests/rss-derniers-tests/' => 'Flux Tests',
+            'https://www.01net.com/rss/actualites/applis-logiciels/' => 'Flux Applis & Logiciels',
+            'https://www.01net.com/rss/actualites/jeux/' => 'Flux Jeux',
+            'https://www.01net.com/rss/actualites/securite/' => 'Flux Securité'
+        ]; // Tableau avec les feeds pour le select, les $key seront les xml
 ?>
 
         <section class="">
@@ -102,29 +102,7 @@ class rss
                             </div>
                         </div>
 
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Launch demo modal
-                        </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
         <?php
                 }
