@@ -29,9 +29,61 @@ body
 
 .navbar_style
 {
-    
+    background: #34495e !important;
 }
 
+.navbar_style_a
+{
+    color: white !important;
+}
+
+.navbar_style_button{
+    border: none !important;
+    background: #34495e !important;
+    color: white !important;
+    transition-duration: 0.3s !important;
+    outline: none !important;
+}
+
+.navbar_style_button:active
+{
+    border: none !important;
+    transform: rotate(180deg) !important;
+    color: #e67e22 !important;
+}
+
+.container_parent
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background: #34495e;
+    color: white;
+}
+
+.container_parent .col_child
+{
+    background: none;
+    transition-duration: 0.3s;
+}
+
+.container_parent .col_child:hover
+{
+    background:rgba(255, 255, 255, 0.171)
+}
+
+.container_parent .col_child h2
+{
+    font-size: 2em !important;
+}
+
+.container_parent .col_child .inner
+{
+    padding: 1em;
+    border-left: 1px solid rgba(255, 255, 255, 0.171);
+    border-right: 1px solid rgba(255, 255, 255, 0.171);
+}
 
 /***********************************************************************************************************/
 /**********************************************   PARAMETRE   **********************************************/
