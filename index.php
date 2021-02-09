@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar_style navbar" aria-label="First navbar example">
+    <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
         <div class="container-fluid">
             <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
             <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,9 @@
                 <!---------------------------------------------------------------------------->
                 <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
                     <div class="inner">
-                    <input id="darkmods_button" type="button" onclick="change()"  value="dark mode">
+                        <input id="default_mods_button" type="button" onclick="default_mods();"  value="default_mods">
+                        <input id="dark_mods_button" type="button" onclick="dark_mods();"  value="dark_mods">
+                        <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();"  value="unicorn_mods">
                     </div>
                 </div>
                 <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">

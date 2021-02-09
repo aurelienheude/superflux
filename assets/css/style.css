@@ -30,7 +30,7 @@ body {
 
 .navbar_style
 {
-    background: #34495e !important;
+    background: #34495e;
 }
 
 .navbar_style_a
@@ -41,7 +41,7 @@ body {
 .navbar_style_button
 {
     border: none !important;
-    background: #34495e !important;
+    background: none;
     color: white !important;
     transition-duration: 0.3s !important;
     outline: none !important;
