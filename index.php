@@ -24,7 +24,7 @@
                 <i class="config_button fas fa-cog fa-2x"></i>
             </button>
         </div>
-
+    </nav>
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="container_parent container-fluid m-0 p-0 ">
             <div class="row p-0 m-0">
