@@ -60,8 +60,37 @@
                 <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'selected' : '' ?>>
                 <label for="<?= $value ?>"><?= $value ?></label>
             </div>
+
+            <div>
+                <input type="radio" id="tout" name="number" value="20" <?= isset($_POST['number']) && $_POST['number'] == '20' ? 'checked' : '' ?> ?>
+                <label for="tout">tout</label>
+            </div>
+
+            <p>Feed</p>
+            <?php
+            foreach ($feedArray as $key => $value) { ?>
+                <div>
+                    <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'selected' : '' ?>>
+                    <label for="<?= $value ?>"><?= $value ?></label>
+                </div>
+            <?php
+            }
+            ?>
+            </select>
+            <input type="submit" id="submit" value="submit" name="submit">
+        </form>
+
+
         <?php
-        }
+        if (isset($_POST['submit'])) {
+
+            $number = $_POST['number'];
+            $feed = $_POST['feed'];
+            $xml = simplexml_load_file($feed); // On prend le bon feed.
+
+            if ($number > 0) {
+
+                for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
         </select>
         <input type="submit" id="submit" value="submit" name="submit">
