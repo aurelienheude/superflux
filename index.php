@@ -53,6 +53,11 @@
                 <label for="10">10</label>
             </div>
 
+            <div>
+                <input type="radio" id="tout" name="number" value="20" <?= isset($_POST['number']) && $_POST['number'] == '20' ? 'checked' : '' ?> ?>
+                <label for="tout">tout</label>
+            </div>
+
             <p>Feed</p>
             <?php
             foreach ($feedArray as $key => $value) { ?>
@@ -74,6 +79,7 @@
             $number = $_POST['number'];
             $feed = $_POST['feed'];
             $xml = simplexml_load_file($feed); // On prend le bon feed.
+
             if ($number > 0) {
 
                 for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
