@@ -34,7 +34,7 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <div class="collapse" id="navbarToggleExternalContent">
-            <form class="form_style" action="index.php" method="post">
+            <form id="container_parent" class="form_style" action="index.php" method="post">
 
                 <div id="container_parent" class="container_parent container-fluid">
                     <div class="row">
@@ -89,7 +89,7 @@
             </form>
         </div>
 
-        <div class="container">
+        <div id="fake_body" class="fake_body container">
             <?php
                 $obj_rss = new rss;
                 $obj_rss->rss_tools();

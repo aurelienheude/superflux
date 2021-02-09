@@ -19,12 +19,13 @@ function white_mods()
 {
     if (init == 0) 
     {
-        navbar.style.backgroundColor = "#ecf0f1";
-        body.style.backgroundColor = "white";
+        navbar.style.backgroundColor = "#FFFFFF"
+        body.style.backgroundColor = "#FFFFFF";
         button.style.backgroundColor = "";
-        text.style.color = "white";
-        container_parent.style.backgroundColor = "white";
-        branding.style.color = "white";
+        text.style.color = "#whFFFFFFite";
+        container_parent.style.backgroundColor = "#FFFFFF";
+        branding.style.color = "#000";
+        
         init == 1;
     }
 }
@@ -42,10 +43,10 @@ function dark_mods()
     {
         navbar.style.backgroundColor = "#252525";
         body.style.backgroundColor = "#252525";
-        button.style.backgroundColor = "";
-        text.style.backgroundColor = "white";
+        button.style.backgroundColor = "#252525";
+        text.style.backgroundColor = "#FFFFFF";
         container_parent.style.backgroundColor = "#252525";
-        branding.style.color = "white";
+        branding.style.color = "#FFFFFF";
 
         init == 1;
     }
@@ -65,6 +66,7 @@ function default_mods()
         text.style.backgroundColor = "";
         container_parent.style.backgroundColor = "";
         branding.style.color = "white";
+
         init == 1;
     }
 }
