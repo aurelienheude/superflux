@@ -11,7 +11,7 @@
             <div class="col-md-6 text-center">
                 <h4>Nous contacter</h4>
                 <ul>
-                    <li><a class="footerLink" href="" target="_blank">Mentions légales</a></li>
+                    <li><a class="footerLink" href="mentionlegale.php" target="_blank">Mentions légales</a></li>
                     <li><a class="footerLink" href="" target="_blank">Telephone</li>
                 </ul>
             </div>
