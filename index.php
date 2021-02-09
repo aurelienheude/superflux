@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div class="main"></div>
     <nav class="navbar_style navbar" aria-label="First navbar example">
         <div class="container-fluid">
             <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
@@ -25,32 +26,32 @@
             </button>
         </div>
 
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="container_parent container-fluid m-0 p-0 ">
-            <div class="col_child p-4">
-                <div class="inner">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="container_parent container-fluid m-0 p-0 ">
+                <div class="col_child p-4">
+                    <div class="inner">
 
-                    <h2>Choisir un thème</h2>
-                    <hr>
+                        <h2>Choisir un thème</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col_child p-4">
+                    <div class="inner">
+
+                        <h2>Séléctionnez le flux</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col_child p-4">
+                    <div class="inner">
+
+                        <h2>Choisir le nombre de flux</h2>
+                        <hr>
+                    </div>
                 </div>
             </div>
-            <div class="col_child p-4">
-                <div class="inner">
 
-                    <h2>Séléctionnez le flux</h2>
-                    <hr>
-                </div>
-            </div>
-            <div class="col_child p-4">
-                <div class="inner">
-
-                    <h2>Choisir le nombre de flux</h2>
-                    <hr>
-                </div>
-            </div>
         </div>
-
-    </div>
 
     <div class="container">
 
@@ -58,7 +59,7 @@
         $obj_rss = new rss;
         $obj_rss->rss_tools();
         ?>
-
+</div>
         <div>
             <?php
             include('footer.php');
