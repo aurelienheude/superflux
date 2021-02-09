@@ -17,73 +17,75 @@
 </head>
 
 <body>
-<div class="main"></div>
-    <nav class="navbar_style navbar" aria-label="First navbar example">
-        <div class="container-fluid">
-            <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
-            <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="config_button fas fa-cog fa-2x"></i>
-            </button>
-        </div>
-    </nav>
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="container_parent container-fluid m-0 p-0 ">
-            <div class="row p-0 m-0">
-                <!---------------------------------------------------------------------------->
-                <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                    <div class="inner">
-                        <h2>Choisir un thème</h2>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 p-5 col_child d-flex justify-content-center bg-success">
-                    <div class="inner inner_center">
-                        <h2>Séléctionnez le flux</h2>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                    <div class="inner">
-                        <h2>Choisir le nombre de flux</h2>
-
-                    </div>
-                </div>
-                <!---------------------------------------------------------------------------->
-                <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                    <div class="inner">
-                    <input id="darkmods_button" type="button" onclick="change()"  value="dark mode">
-                    </div>
-                </div>
-                <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                    <div class="inner">
-                        <h2>Choisir le nombre de flux</h2>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
-                    <div class="inner">
-                        <h2>Choisir le nombre de flux</h2>
-
-                    </div>
-                </div>
-                <!---------------------------------------------------------------------------->
+    <div class="main">
+        <nav class="navbar_style navbar" aria-label="First navbar example">
+            <div class="container-fluid">
+                <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
+                <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="config_button fas fa-cog fa-2x"></i>
+                </button>
             </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="container_parent container-fluid m-0 p-0 ">
+                <div class="row p-0 m-0">
+                    <!---------------------------------------------------------------------------->
+                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
+                        <div class="inner">
+                            <h2>Choisir un thème</h2>
 
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-5 col_child d-flex justify-content-center bg-success">
+                        <div class="inner inner_center">
+                            <h2>Séléctionnez le flux</h2>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
+                        <div class="inner">
+                            <h2>Choisir le nombre de flux</h2>
+
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------->
+                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
+                        <div class="inner">
+                            <input id="darkmods_button" type="button" onclick="change()" value="dark mode">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
+                        <div class="inner">
+                            <h2>Choisir le nombre de flux</h2>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
+                        <div class="inner">
+                            <h2>Choisir le nombre de flux</h2>
+
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------->
+                </div>
+            </div>
         </div>
 
-    <div class="container">
 
-        <?php
-        $obj_rss = new rss;
-        $obj_rss->rss_tools();
-        ?>
-</div>
-        <div>
+
+        <div class="container">
             <?php
-            include('footer.php');
+            $obj_rss = new rss;
+            $obj_rss->rss_tools();
             ?>
         </div>
-
+        
+    </div>
+    </div>
+    <div>
+        <?php
+        include('footer.php');
+        ?>
     </div>
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
