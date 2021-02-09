@@ -1,60 +1,32 @@
 # superflux
-pas très utile, mais agréable quand même. confusus à dit, c'est la hess ruiah
-# Project Title
 
-Simple overview of use/purpose.
 
-## Description
+## Note
 
-An in-depth paragraph about your project and overview of use.
+pas très utile, mais agréable quand même. confusus à dit, c'est la hess ruiah.
 
-## Getting Started
+## Aide
 
-### Dependencies
+[une aide très utlile qui nous a permis de faire entièrement le projet](https://youtu.be/dQw4w9WgXcQ)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+## Auteurs
 
-### Installing
+Nom des contributeurs
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+William le grand
+Aurélien au grand pied xD
 
-### Executing program
+## Version
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
-    * Initial Release
+    * bug mineur et optimisation
+    * See [commit change]() or See [release history]()
 
-## License
+## Licence
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Ce projet est licencié par notre deus, le grand Anousone, roi du petit peuble, et grand maitre des licornes argentée.
 
-## Acknowledgments
+## Techno et inspiration
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
