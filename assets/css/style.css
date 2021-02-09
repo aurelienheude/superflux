@@ -19,8 +19,12 @@
 body {
     margin: 0px;
     padding: 0px;
-
 }
+
+
+/***********************************************************************************************************/
+/*************************************************   NAV    ************************************************/
+/***********************************************************************************************************/
 
 .navbar_style
 {
@@ -32,7 +36,8 @@ body {
     color: white !important;
 }
 
-.navbar_style_button{
+.navbar_style_button
+{
     border: none !important;
     background: #34495e !important;
     color: white !important;
@@ -47,79 +52,16 @@ body {
     color: #e67e22 !important;
 }
 
-.container_parent
-{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    background: #34495e;
-    color: white;
-}
-
-.container_parent .col_child
-{
-    background: none;
-    transition-duration: 0.3s;
-}
-
-.container_parent .col_child:hover
-{
-    background:rgba(255, 255, 255, 0.171)
-}
-
-.container_parent .col_child h2
-{
-    font-size: 2em !important;
-}
-
-.container_parent .col_child .inner
-{
-    padding: 1em;
-    border-left: 1px solid rgba(255, 255, 255, 0.171);
-    border-right: 1px solid rgba(255, 255, 255, 0.171);
-}
-
-.buttonImg {
-    height: 40px;
-}
-
-.btnNews {
-    width: 100%;
-    display: flex;
-    background-color: white;
-}
-
-.btnNews:hover {
-
-    background-color: grey;
-
-}
-
-.btnNewsSpan {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-footer {
-    background-color: #34495e;
-}
-
-
-
-/***********************************************************************************************************/
-/*************************************************   NAV    ************************************************/
-/***********************************************************************************************************/
-
-.navbar_style {}
-
 
 /***********************************************************************************************************/
 /**********************************************   PARAMETRE   **********************************************/
 /***********************************************************************************************************/
+
+.col_child
+{   
+    padding: 1em;
+    border-right: 3px solid black;
+}
 
 .theme_dark {}
 
