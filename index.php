@@ -17,36 +17,38 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">SUPER FLUX</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <div class="main">
+        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">SUPER FLUX</a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
 
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Collapsed content</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
         </div>
+
+        <div class="container">
+            <?php
+            $obj_rss = new rss;
+            $obj_rss->rss_tools();
+            ?>
+        </div>
+
+        <div>
+            <?php
+            include('footer.php');
+            ?>
+        </div>
+
     </div>
 
-    <div class="container">
-
-    <?php 
-        $obj_rss = new rss;
-        $obj_rss->rss_tools();
-    ?>
-
-
-    </div>
-
-    <footer class="fixed-bottom">
-
-
-    </footer>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------   FICHIER JS   ------------------------------------------------------------------------------->
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
