@@ -17,29 +17,47 @@
 </head>
 
 <body>
-    <div class="main">
-        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">SUPER FLUX</a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
+    <nav class="navbar_style navbar" aria-label="First navbar example">
+        <div class="container-fluid">
+            <a class="navbar_style_a navbar-brand" href="#">SUPER FLUX</a>
+            <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="config_button fas fa-cog fa-2x"></i>
+            </button>
+        </div>
 
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h5 class="text-white h4">Collapsed content</h5>
-                <span class="text-muted">Toggleable via the navbar brand.</span>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="container_parent container-fluid m-0 p-0 ">
+            <div class="col_child p-4">
+                <div class="inner">
+
+                    <h2>Choisir un thème</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="col_child p-4">
+                <div class="inner">
+
+                    <h2>Séléctionnez le flux</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="col_child p-4">
+                <div class="inner">
+
+                    <h2>Choisir le nombre de flux</h2>
+                    <hr>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <?php
-            $obj_rss = new rss;
-            $obj_rss->rss_tools();
-            ?>
-        </div>
+    </div>
+
+    <div class="container">
+
+        <?php
+        $obj_rss = new rss;
+        $obj_rss->rss_tools();
+        ?>
 
         <div>
             <?php
