@@ -35,59 +35,56 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <div class="collapse" id="navbarToggleExternalContent">
-        <form class="form_style" action="index.php" method="post">
-                    
-            <div class="container_parent container-fluid">
-                <div class="row">
-                    <!---------------------------------------------------------------------------->
-                    <div class="col-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <h2>Choisir un thème</h2>
-                            <input id="default_mods_button" type="button" onclick="default_mods();" value="default_mods">
-                            <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
-                            <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
-                        </div>
-                    </div>
+            <form class="form_style" action="index.php" method="post">
 
-
-                    <div class="col-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-                            <div>
-                                <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
-                                <label for="5">5</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" id="10" name="number" value="9" <?= isset($_POST['number']) && $_POST['number'] == '10' ? 'checked' : '' ?> ?>
-                                <label for="10">10</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
-                                <label for="tout">tout</label>
+                <div class="container_parent container-fluid">
+                    <div class="row">
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
+                                <h2>Choisir un thème</h2>
+                                <input id="default_mods_button" type="button" onclick="default_mods();" value="default_mods">
+                                <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
+                                <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 col_child p-5 d-flex justify-content-center bg-primary">
-                        <div class="inner">
-
-                            <?php
-                            foreach ($feedArray as $key => $value) { ?>
-                                <div>
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
+                                <h2>Choisir un Flux</h2>
+                                <?php
+                                foreach ($feedArray as $key => $value) { ?>
                                     <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'checked' : '' ?>>
                                     <label for="<?= $value ?>"><?= $value ?></label>
-                                </div>
-                            <?php
-                            }
-                            ?>
+                                <?php } ?>
 
-                            <input type="submit" id="submit" value="submit" name="submit">
+                            </div>
                         </div>
-                    </div>
+                        <!---------------------------------------------------------------------------->
+                        <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
+                            <div class="inner text-center">
 
-                    <!--------------------------------------------------------------------------->
+                                <h2>Nombre de flux</h2>
+                                <div>
+                                    <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
+                                    <label for="5">5</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="10" name="number" value="9" <?= isset($_POST['number']) && $_POST['number'] == '10' ? 'checked' : '' ?> ?>
+                                    <label for="10">10</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
+                                    <label for="tout">tout</label>
+                                </div>
+                                <input type="submit" id="submit" value="submit" name="submit">
+                            </div>
+                        </div>
+                        <!--------------------------------------------------------------------------->
+                    </div>
                 </div>
-            </div>
             </form>
         </div>
 
