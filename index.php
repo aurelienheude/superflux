@@ -57,6 +57,37 @@
                     <div class="col-lg-4 col_child p-5 d-flex justify-content-center bg-primary">
                         <div class="inner">
                             <h2>Choisir le nombre de flux</h2>
+                            
+                            <form action="index.php" method="post">
+                                <p> Nombre de posts </p>
+                                <div>
+                                    <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
+                                    <label for="5">5</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="10" name="number" value="9" <?= isset($_POST['number']) && $_POST['number'] == '10' ? 'checked' : '' ?> ?>
+                                    <label for="10">10</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="tout" name="number" value="18" <?= isset($_POST['number']) && $_POST['number'] == '18' ? 'checked' : '' ?> ?>
+                                    <label for="tout">tout</label>
+                                </div>
+
+                                <p>Feed</p>
+                                <?php
+                                foreach ($feedArray as $key => $value) { ?>
+                                    <div>
+                                        <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'checked' : '' ?>>
+                                        <label for="<?= $value ?>"><?= $value ?></label>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+
+                                <input type="submit" id="submit" value="submit" name="submit">
+                            </form>
 
                         </div>
                     </div>
@@ -79,7 +110,7 @@
             $obj_rss->rss_tools();
             ?>
         </div>
-        
+
     </div>
     </div>
     <div>
