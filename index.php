@@ -17,38 +17,48 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+    <nav class="navbar_style navbar navbar-dark bg-dark px-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">SUPER FLUX</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <h1 class="nav-brand h1 text-light">SUPER FLUX</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
         </div>
     </nav>
 
-    <div class="container">
-
-        <section class="">
-
-        </section>
-
-        <section class="cards">
-            <header></header>
-        </section>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
 
 
-        <!-- J'ai mit un form pour tester mais je pense pas qu'on aura la meme chose -->
-        <form action="index.php" method="post">
-            <p> Nombre de posts </p>
+
+    <section class="cards">
+        <header></header>
+    </section>
+
+
+    <!-- J'ai mit un form pour tester mais je pense pas qu'on aura la meme chose -->
+    <form action="index.php" method="post">
+        <p> Nombre de posts </p>
+        <div>
+            <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
+            <label for="5">5</label>
+        </div>
+
+        <div>
+            <input type="radio" id="10" name="number" value="9" <?= isset($_POST['number']) && $_POST['number'] == '10' ? 'checked' : '' ?> ?>
+            <label for="10">10</label>
+        </div>
+
+        <p>Feed</p>
+        <?php
+        foreach ($feedArray as $key => $value) { ?>
             <div>
-                <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
-                <label for="5">5</label>
-            </div>
-
-            <div>
-                <input type="radio" id="10" name="number" value="9" <?= isset($_POST['number']) && $_POST['number'] == '10' ? 'checked' : '' ?> ?>
-                <label for="10">10</label>
+                <input type="radio" id="<?= $key ?>" name="feed" value="<?= $key ?>" <?= isset($_POST['feed']) && $_POST['feed'] == $key ? 'selected' : '' ?>>
+                <label for="<?= $value ?>"><?= $value ?></label>
             </div>
 
             <div>
@@ -114,15 +124,13 @@
                             </div>
                         </div>
                     </div>
-        <?php
-                }
+                </div>
+    <?php
             }
         }
-        ?>
+    }
+    ?>
 
-
-
-    </div>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------   FICHIER JS   ------------------------------------------------------------------------------->
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
