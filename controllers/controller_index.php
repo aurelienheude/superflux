@@ -16,16 +16,6 @@ class rss
         ]; // Tableau avec les feeds pour le select, les $key seront les xml
 ?>
 
-        <section class="">
-
-        </section>
-
-        <section class="cards">
-            <header></header>
-        </section>
-
-
-        <!-- J'ai mit un form pour tester mais je pense pas qu'on aura la meme chose -->
         <form action="index.php" method="post">
             <p> Nombre de posts </p>
             <div>
@@ -60,52 +50,57 @@ class rss
 
         <?php
         if (isset($_POST['submit'])) {
-
-            $number = $_POST['number'];
-            $feed = $_POST['feed'];
-            $xml = simplexml_load_file($feed); // On prend le bon feed.
+            if (isset($_POST['number']) && isset($_POST['feed'])) {
 
 
-            if ($number > 0) {
+                $number = $_POST['number'];
+                $feed = $_POST['feed'];
+                $xml = simplexml_load_file($feed); // On prend le bon feed.
+                if ($number > 0) {
 
-                for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
+                    for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
-                    <div>
-                        <button type="button fade" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
-                            <?= $xml->channel->item[$i]->title ?>
-                        </button>
-                    </div>
+                        <div>
+                            <button type="button fade" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
+                            <span class="btnNewsSpan">
+                                <span class="wtBtnImage"><img class="buttonImg" src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="..."></span>
+                                <span class="wtBtnTitle"><?= $xml->channel->item[$i]->title ?></span>
+                                <span class="wtBtnInfos">+ d'infos</span>
+                                </span>
+                            </button>
+                        </div>
 
-                    <div class="modal" id="<?= "modal-$i" ?>" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title"><?= $xml->channel->item[$i]->title ?></h5>
-                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="...">
+                        <div class="modal" id="<?= "modal-$i" ?>" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"><?= $xml->channel->item[$i]->title ?></h5>
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="...">
 
-                                    <?php
-                                    $toExplode = $xml->channel->item[$i]->description;
-                                    $pieces = explode("<br/><br/>", $toExplode);
-                                    ?>
-                                    <p class="card-text"><?= $pieces[0] ?> <br>
-                                        <?= $xml->channel->item[$i]->link->pubDate ?> </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn-primary">Article</a>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <?php
+                                        $toExplode = $xml->channel->item[$i]->description;
+                                        $pieces = explode("<br/><br/>", $toExplode);
+                                        ?>
+                                        <p class="card-text"><?= $pieces[0] ?> <br>
+                                            <?= $xml->channel->item[$i]->link->pubDate ?> </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn-primary">Article</a>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-
-                    </div>
         <?php
+                    }
                 }
+            } else {
+                echo 'y\'as une erreur frére';
             }
         }
         ?>
