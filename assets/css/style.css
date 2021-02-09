@@ -38,81 +38,21 @@ body
 /***********************************************************************************************************/
 /*************************************************   NAV    ************************************************/
 /***********************************************************************************************************/
-nav
-{
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition-duration: 0.3s;
-    
-    background-color: #34495e;
-}
 
-h1
+.configuration_style
 {
+    margin: 0px;
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    font-weight: bold;
-    color: white;
-}
-
-.theme_name
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 15px;
-    font-weight: bold;
-    color: white;
+    background: #333;
 }
 
 /***********************************************************************************************************/
 /**********************************************   PARAMETRE   **********************************************/
 /***********************************************************************************************************/
 
-.configuration_menu
-{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    padding: 15px;
-    height: 40px;
-    width: 40px;
-
-    cursor: pointer;
-
-    transition-duration: 0.4s;
-}
-
-.configuration_menu i
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition-duration: 0.4s;
-    color: white;
-}
-
-.configuration_menu i:hover
-{
-    transform: rotate(180deg);
-    color: #f1c40f;
-}
-
-.configuration_menu i:active .configuration_menu
-{
-    width: 800px;
-    height: 800px;
-    color: #333;
-    background: red;
-}
 /***********************************************************************************************************/
 /************************************************   CARDS   ************************************************/
 /***********************************************************************************************************/
