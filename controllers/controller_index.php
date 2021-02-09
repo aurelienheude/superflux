@@ -35,7 +35,7 @@ class rss
                     for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
                         <div>
-                            <button type="button fade" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
+                            <button type="button fade" id="button" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
                                 <span class="btnNewsSpan">
                                     <span class="wtBtnImage"><img class="buttonImg" src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="..."></span>
                                     <span class="wtBtnTitle"><?= $xml->channel->item[$i]->title ?></span>
@@ -46,30 +46,32 @@ class rss
 
                         <div class="modal" id="<?= "modal-$i" ?>" tabindex="-1" role="dialog">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                                <div class="modal_header modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title"><?= $xml->channel->item[$i]->title ?></h5>
-                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <h5 class="text-light modal-title"><?= $xml->channel->item[$i]->title ?></h5>
+                                        <button type="button" class="btn_style close"  data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal_body modal-body">
                                         <img src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="...">
-
+                                        <br /><br />
+                                        
                                         <?php
                                         $toExplode = $xml->channel->item[$i]->description;
                                         $pieces = explode("<br/><br/>", $toExplode);
                                         $date = strtotime($xml->channel->item[$i]->pubDate);
                                         $date2 = strftime("%A %d %B", $date);
                                         ?>
+                                        <b><p class="text-center"><?= $date2  ?></p></b><br />
 
-                                        <p class="card-text"> <?= $pieces[0] ?> </p>
-                                        <p><?= $date2  ?></p>
+                                        <b><p class="card-text"> <?= $pieces[0] ?> </p></b><br />
+                                        
 
                                     </div>
-                                    <div class="modal-footer">
-                                        <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn-primary">Article</a>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <div class="modal_footer modal-footer">
+                                        <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn_style">Article</a>
+                                        <button type="button" class="btn btn_style" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>

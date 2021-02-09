@@ -20,7 +20,6 @@
     <!------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------->
-    <div class="main">
         <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
             <div class="container-fluid">
                 <a id="branding" class="navbar_style_a navbar-brand" href="https://youtu.be/dQw4w9WgXcQ">SUPER FLUX</a>
@@ -44,9 +43,9 @@
                             <div class="inner text-center">
                                 <h2>Choisir un thème</h2>
                                 <div class="button_group">
-                                    <input id="default_mods_button" class="btn btn_style" type="button" onclick="default_mods();" value="LIGHT">
+                                    <input id="white_mods_button" type="button" class="btn btn_style" onclick="white_mods();" value="LIGHT">
                                     <input id="dark_mods_button" type="button" class="btn btn_style" onclick="dark_mods();" value="DARK">
-                                    <input id="unicorn_mods_button" type="button" class="btn btn_style" onclick="unicorn_mods();" value="UNICORN">
+                                    <input id="default_button" type="button" class="btn btn_style" onclick="default_mods();" value="NORMAL">
                                 </div>
 
                             </div>
@@ -96,11 +95,6 @@
                 $obj_rss->rss_tools();
             ?>
         </div>
-    </div> <!-- MAIN END -->
-
-    <?php
-    include('footer.php');
-    ?>
 
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------   FICHIER JS   ------------------------------------------------------------------------------->
