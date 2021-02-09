@@ -35,10 +35,10 @@ class rss
                     for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
                         <div>
-                            <button type="button fade" id="button" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
+                            <button type="button fade" id="text" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
                                 <span class="btnNewsSpan">
                                     <span class="wtBtnImage"><img class="buttonImg" src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="..."></span>
-                                    <span class="wtBtnTitle"><?= $xml->channel->item[$i]->title ?></span>
+                                    <span id="text" class="wtBtnTitle"><?= $xml->channel->item[$i]->title ?></span>
                                     <span class="wtBtnInfos">+ d'infos</span>
                                 </span>
                             </button>
