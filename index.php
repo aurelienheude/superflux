@@ -20,7 +20,7 @@
     <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SUPER FLUX</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
@@ -31,7 +31,7 @@
             <h5 class="text-white h4">Collapsed content</h5>
             <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
-    </nav>
+    </div>
 
     <div class="container">
 
