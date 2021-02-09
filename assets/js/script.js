@@ -21,10 +21,10 @@ function default_mods()
     if (init == 0) 
     {
         navbar.style.backgroundColor = "#ecf0f1";
-        footer.style.backgroundColor = "";
+        footer.style.backgroundColor = "#ecf0f1";
         body.style.backgroundColor = "white";
         button.style.backgroundColor = "";
-        text.style.backgroundColor = "";
+        text.style.color = "white";
         container_parent.style.backgroundColor = "white";
         branding.style.color = "white";
         init == 1;
