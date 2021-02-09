@@ -27,6 +27,9 @@ class rss
 
                 $feed = $_POST['feed'];
                 $xml = simplexml_load_file($feed); // On prend le bon feed.
+
+                setlocale(LC_TIME, 'fr_FR.UTF8', 'fra');
+
                 if ($number > 0) {
 
                     for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
@@ -56,9 +59,13 @@ class rss
                                         <?php
                                         $toExplode = $xml->channel->item[$i]->description;
                                         $pieces = explode("<br/><br/>", $toExplode);
+                                        $date = strtotime($xml->channel->item[$i]->pubDate);
+                                        $date2 = strftime("%A %d %B", $date);
                                         ?>
-                                        <p class="card-text"><?= $pieces[0] ?> <br>
-                                            <?= $xml->channel->item[$i]->link->pubDate ?> </p>
+
+                                        <p class="card-text"> <?= $pieces[0] ?> </p>
+                                        <p><?= $date2  ?></p>
+
                                     </div>
                                     <div class="modal-footer">
                                         <a href="<?= $xml->channel->item[$i]->link ?>" target="_blank" class="btn btn-primary">Article</a>
