@@ -43,9 +43,12 @@
                         <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
                             <div class="inner text-center">
                                 <h2>Choisir un thème</h2>
-                                <input id="default_mods_button" type="button" onclick="default_mods();" value="default_mods">
-                                <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
-                                <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
+                                <div class="button_group">
+                                    <input id="default_mods_button" class="btn btn_default" type="button" onclick="default_mods();" value="default_mods">
+                                    <input id="dark_mods_button" type="button" onclick="dark_mods();" value="dark_mods">
+                                    <input id="unicorn_mods_button" type="button" onclick="unicorn_mods();" value="unicorn_mods">
+                                </div>
+
                             </div>
                         </div>
                         <!---------------------------------------------------------------------------->
@@ -63,7 +66,6 @@
                         <!---------------------------------------------------------------------------->
                         <div class="col-xl-4 col_child p-5 d-flex justify-content-center">
                             <div class="inner text-center">
-
                                 <h2>Nombre de flux</h2>
                                 <div>
                                     <input type="radio" id="5" name="number" value="4" <?= isset($_POST['number']) && $_POST['number'] == '5' ? 'checked' : '' ?> ?>
