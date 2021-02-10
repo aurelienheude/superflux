@@ -189,6 +189,8 @@ body
 }
 .modal_footer
 {
+    display: flex;
+    justify-content: center;
     background: #262a2e !important;
 }
 

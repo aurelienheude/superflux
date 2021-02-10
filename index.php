@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPER FLUX</title>
+    <title>SUPERFLUX</title>
 
     <!-- PAGE CSS -->
     <link rel="stylesheet" href="<?= $style ?>">
@@ -23,7 +23,7 @@
     <!------------------------------------------------------------------------------------------------------------------------->
     <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
         <div class="container-fluid">
-            <a id="branding" class="navbar_style_a navbar-brand" href="mentionlegale.php">SUPER FLUX <br>
+            <a id="branding" class="navbar_style_a navbar-brand" href="mentionlegale.php">SUPERFLUX <br>
                 <marquee>Moins ca sert, mieux ca marche.</marquee>
             </a>
             <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
