@@ -125,12 +125,6 @@ body
     transition-duration: 0.3s;
 }
 
-.container_parent .col_child .inner:hover
-{
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-}
-
 .form_style
 {
     margin: 0px !important;
@@ -142,7 +136,7 @@ body
 }
 
 .btnNews {
-    width: 100%;
+    width: 100% !important;
     display: flex;
     background-color: white;
     color : white !important;
@@ -161,6 +155,8 @@ body
         background-color: white;
         color : white !important;
         height : 110px;
+        border: 1px solid white !important;
+
     }
 }
 
@@ -206,4 +202,30 @@ marquee {
 #supersubtitle {
     font-size: 75px;
     color : white;
+}
+
+@media screen and (max-width: 640px) {
+
+    #supertitle {
+        font-size : 40px;
+        color : white;
+    }
+    #supersubtitle {
+        display : none;
+    }
+}
+
+#footer {
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    background-color : #262a2e !important;
+}
+ul {
+    list-style-type: none;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: white;
 }

@@ -12,11 +12,11 @@ $feedArray = [
 $style = 'assets/css/style.css?rnd=132';
 if (isset($_POST['style'])) {
     if ($_POST['style'] == 'style1') {
-        $style = 'assets/css/style.css?rnd=132';
+        $style = 'assets/css/style.css';
     } else if ($_POST['style'] == 'style2') {
-        $style = 'assets/css/style2.css?rnd=132';
+        $style = 'assets/css/style2.css';
     } else if ($_POST['style'] == 'style3') {
-        $style = 'assets/css/style3.css?rnd=132';
+        $style = 'assets/css/style3.css';
     } else {
         $style = 'assets/css/style.css?rnd=132';
     }
@@ -47,7 +47,7 @@ class rss
 
                     for ($i = 0; $i <= $number; $i++) { // On prend le nombre de post choisi faut encore voir pour l'option "tout".
         ?>
-                        <div>
+                        <div id="bubuLeButton">
                             <button type="button fade" id="text" class="btn btnNews" data-bs-toggle="modal" data-bs-target="#<?= "modal-$i" ?>">
                                 <span class="btnNewsSpan">
                                     <span class="wtBtnImage"><img class="buttonImg" src="<?= $xml->channel->item[$i]->enclosure['url'] ?>" class="card-img-top" alt="..."></span>

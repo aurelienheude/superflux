@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPERFLUX</title>
+    <link rel="icon" href="assets/img/1164px-Superman_S_symbol.svg">
+
 
     <!-- PAGE CSS -->
     <link rel="stylesheet" href="<?= $style ?>">
@@ -115,6 +117,7 @@
             $obj_rss = new rss;
             $obj_rss->rss_tools();
             ?>
+            <?php include('footer.php')?>
         </div>
 
     </div>
