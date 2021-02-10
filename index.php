@@ -23,7 +23,7 @@
     <!------------------------------------------------------------------------------------------------------------------------->
     <nav class="navbar_style navbar" id="navbar" aria-label="First navbar example">
         <div class="container-fluid">
-            <a id="branding" class="navbar_style_a navbar-brand" href="https://youtu.be/dQw4w9WgXcQ">SUPER FLUX <br>
+            <a id="branding" class="navbar_style_a navbar-brand" href="mentionlegale.php">SUPER FLUX <br>
                 <marquee>Moins ca sert, mieux ca marche.</marquee>
             </a>
             <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
