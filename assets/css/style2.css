@@ -17,12 +17,12 @@
 
 body
 {
-    background: #262a2ee1 !important;
+    background: #d6d8da !important;
 }
 /* 
 .fakebody
 {
- background: #262a2ee1 !important; 
+ background: #d6d8dae1 !important; 
 } */
 
 /***********************************************************************************************************/
@@ -31,14 +31,15 @@ body
 
 .navbar_style
 {
-    background: #262a2e;
+    background: white;
+    color : black;
     box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.288);
 }
 
 .navbar_style_a
 {
     font-size: 18px;
-    color: white !important;
+    color: black !important;
     text-shadow: 0px 4px 1px -2px rgba(0, 0, 0, 0.288);
     transition-duration: 0.3s ;
     font-weight: bold;
@@ -55,7 +56,7 @@ body
 {
     border: none !important;
     background: none;
-    color: white !important;
+    color: black !important;
     transition-duration: 0.3s !important;
     outline: none !important;
 }
@@ -79,8 +80,8 @@ body
 {
     margin: 0px !important;
     padding: 0px !important;
-    background: #262a2e;
-    color: white;
+    background: #d6d8da;
+    color: black;
     box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
 }
 
@@ -91,17 +92,17 @@ body
 
 .btn_style
 {
-    color: white !important;
+    color: black !important;
     font-weight: bold;
     border-radius: 0px !important;
     box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.288) !important;
-    background: #262a2e !important;
+    background: #d6d8da !important;
     transition-duration: 0.3s;
 }
 
 .btn_style:hover
 {
-    background: #262a2e41 !important;
+    background: #d6d8da41 !important;
 }
 
 .container_parent .col_child
@@ -144,11 +145,10 @@ body
 .btnNews {
     width: 100%;
     display: flex;
-    background-color: white;
-    color : white !important;
+    color : black !important;
     height : 120px;
-}
 
+}
 @media screen and (max-width: 640px) {
 
     .buttonImg {
@@ -158,8 +158,7 @@ body
     .btnNews {
         width: 100%;
         display: flex;
-        background-color: white;
-        color : white !important;
+        color : black !important;
         height : 110px;
     }
 }
@@ -180,16 +179,16 @@ body
 
 .modal_header
 {
-    background: #262a2e !important;
+    background: #bebfc0 !important;
 }
 
 .modal_body
 {
-    background: rgb(97, 97, 97) !important;
+    background: white !important;
 }
 .modal_footer
 {
-    background: #262a2e !important;
+    background: #bebfc0 !important;
 }
 
 marquee {
