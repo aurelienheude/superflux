@@ -26,7 +26,6 @@ class rss
     function rss_tools()
     {
 ?>
-
         <?php
         if (isset($_POST['submit'])) {
 
@@ -42,6 +41,7 @@ class rss
                 $xml = simplexml_load_file($feed); // On prend le bon feed.
 
                 setlocale(LC_TIME, "fra.UTF8");
+
 
                 if ($number > 0) {
 

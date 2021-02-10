@@ -103,13 +103,18 @@
     </div>
 
     <div id="fake_body" class="fake_body container">
-        <div id="starshine">
-            <div class="template shine">
-                <?php
-                $obj_rss = new rss;
-                $obj_rss->rss_tools();
-                ?>
+        <div id="homepage" class="text-center">
+            <div class="mx-auto my-auto">
+                <span id="supertitle">SUPERFLUX</span> <br>
+                <span id="supersubtitle">Moins ca sert, mieux ca marche</span>
             </div>
+        </div>
+
+        <div class="template shine">
+            <?php
+            $obj_rss = new rss;
+            $obj_rss->rss_tools();
+            ?>
         </div>
 
     </div>

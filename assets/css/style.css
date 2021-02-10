@@ -197,3 +197,13 @@ body
 marquee {
     display : none;
 }
+
+
+#supertitle {
+    font-size : 140px;
+    color : white;
+}
+#supersubtitle {
+    font-size: 75px;
+    color : white;
+}
