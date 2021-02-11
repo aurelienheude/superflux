@@ -12,7 +12,7 @@ $feedArray = [
 $style = 'assets/css/style.css?rnd=132';
 if (isset($_POST['style'])) {
     if ($_POST['style'] == 'style1') {
-        $style = 'assets/css/style.css';
+        $style = 'assets/css/style.css?v=1';
     } else if ($_POST['style'] == 'style2') {
         $style = 'assets/css/style2.css';
     } else if ($_POST['style'] == 'style3') {
